@@ -1,22 +1,9 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-import { startStandaloneServer } from '@apollo/server/standalone';
-import { ApolloServer } from '@apollo/server';
-import { resolvers } from './resolvers';
+const addition = (a: number, b: number) => {
+  return a + b;
+};
 
-type ApolloContext = {};
+const number1 = 5;
+const number2 = 10;
+const result = addition(number1, number2);
 
-const GRAPHQL_SCHEMA_PATH = resolve(__dirname, 'schema.graphql');
-
-const typeDefs = readFileSync(GRAPHQL_SCHEMA_PATH, { encoding: 'utf-8' });
-
-const server = new ApolloServer<ApolloContext>({
-  typeDefs,
-  resolvers,
-});
-
-startStandaloneServer(server, {
-  listen: { port: 4000 },
-}).then((result) => {
-  console.log(`🚀 Server ready at: ${result.url}`);
-});
+console.log('The result is %d', result);

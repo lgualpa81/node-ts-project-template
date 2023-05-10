@@ -1,4 +1,4 @@
-# Node Typescript Apollo Graphql Starter
+# Node Typescript Starter
 
 This project contains a minimal starter for Node.js project with Typescript, ESLint and Prettier
 
@@ -10,10 +10,6 @@ This project contains a minimal starter for Node.js project with Typescript, ESL
 - Install dependencies
 ```bash
 yarn install
-```
-- Generate the types
-```bash
-yarn graphql-codegen
 ```
 - Start Application
 ```bash
